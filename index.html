@@ -5,54 +5,49 @@
   <title>به تاکام خوش آمدید</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- فونت‌های مورد نیاز -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- فونت‌ها -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fontlibrary.org//face/iran-nastaliq" rel="stylesheet" type="text/css"/>
 
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
-      color: #2e7d32;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom right, #fff8e1, #dcedc1);
+      color: #3e2723;
       text-align: center;
       padding: 40px 20px;
-    }
-
-    h1 {
-      font-family: 'IranNastaliq', serif;
-      font-size: 3.5rem;
-      margin-bottom: 30px;
       direction: rtl;
     }
 
-    h1 .highlight {
-      font-size: 4rem;
-      color: #d84315;
-      font-weight: bold;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      font-family: 'IranNastaliq', serif;
+      font-size: 3.5rem;
+      color: #2e7d32;
+      display: block;
     }
 
     p {
-      font-size: 1.4rem;
-      max-width: 500px;
-      margin: 0 auto 40px;
-      font-weight: 500;
-      line-height: 1.6;
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-weight: 400;
+      color: #5d4037;
     }
 
     .header-image-container {
-      max-width: 960px;
-      margin: 0 auto 40px;
-      border-radius: 20px;
+      max-width: 880px;
+      margin: 0 auto 35px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       border: 4px solid #a5d6a7;
-      filter: brightness(1.05) contrast(1.1) saturate(1.2) sepia(10%);
-      transition: filter 0.5s ease;
-    }
-
-    .header-image-container:hover {
-      filter: brightness(1.1) contrast(1.2) saturate(1.4) sepia(20%);
     }
 
     .header-image-container img {
@@ -63,24 +58,22 @@
 
     .language-selector {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 700px;
-      margin: 0 auto;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .lang-btn {
-      flex: 1 1 140px;
-      padding: 15px 0;
-      border-radius: 12px;
       background-color: #81c784;
       color: white;
-      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      user-select: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
     }
 
     .lang-btn:hover {
@@ -90,25 +83,16 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
       }
-      h1 .highlight {
-        font-size: 3rem;
+      .highlight {
+        font-size: 2.5rem;
       }
       p {
         font-size: 1.1rem;
       }
     }
   </style>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQWD8WE2Q7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VQWD8WE2Q7');
-  </script>
 </head>
 <body>
 
@@ -121,10 +105,11 @@
   <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از طبیعت، آرامش و اصالت.</p>
 
   <div class="language-selector">
-    <a href="index.fa.html" class="lang-btn" lang="fa" hreflang="fa">فارسی</a>
-    <a href="index.en.html" class="lang-btn" lang="en" hreflang="en">English</a>
-    <a href="index.ma.html" class="lang-btn" lang="glk" hreflang="ma">گلکی</a>
-    <a href="Takam/contact.html" class="lang-btn" lang="en" hreflang="en">تماس</a>
+<a href="index.fa.html" class="lang-btn" hreflang="fa">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Lion_and_Sun_Flag.png" alt="پرچم شیر و خورشید" style="height: 20px; vertical-align: middle; margin-left: 8px;"> فارسی</a>
+    <a href="index.en.html" class="lang-btn" hreflang="en">🇬🇧 English</a>
+    <a href="index.ma.html" class="lang-btn" hreflang="glk">🌿 گلکی</a>
+    <a href="Takam/contact.html" class="lang-btn" hreflang="fa">📬 تماس</a>
   </div>
 
 </body>
