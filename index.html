@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>به تاکام خوش آمدید</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+      color: #2e7d32;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header-image-container {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      border: 4px solid #a5d6a7;
+      filter: brightness(1.05) contrast(1.1) saturate(1.2) sepia(10%);
+      transition: filter 0.5s ease;
+    }
+
+    .header-image-container:hover {
+      filter: brightness(1.1) contrast(1.2) saturate(1.4) sepia(20%);
+    }
+
+    .header-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 400px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+    }
+
+    .language-selector {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .lang-btn {
+      flex: 1 1 120px;
+      padding: 15px 0;
+      border-radius: 12px;
+      background-color: #81c784;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    .lang-btn:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQWD8WE2Q7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VQWD8WE2Q7');
+</script>
+  </head>
+  <body>
+  <h1>به تاکام خوش آمدید</h1>
+  <div class="header-image-container">
+    <img src="header-image.jpg" alt="Children in rose garden at sunrise">
+  </div>
+
+ 
+  <p>روستایی زیبا در قلب جنگلهای مازندران</p>
+
+  <div class="language-selector">
+       <a href="index.fa.html" class="lang-btn" lang="fa" hreflang="fa">فارسی</a>
+    <a href="index.en.html" class="lang-btn" lang="en" hreflang="en">English</a>
+    <a href="index.fr.html" class="lang-btn" lang="fr" hreflang="fr">Français</a>
+    <a href="index.ma.html" class="lang-btn" lang="es" hreflang="ma">گلکی</a>
+
+    <a href="https://celianor.github.io/Horia/contact.en.html" class="lang-btn" lang="en" hreflang="en">Contact</a>
+  </div>
+
+</body>
+</html>
