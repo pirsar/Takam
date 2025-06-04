@@ -4,20 +4,34 @@
   <meta charset="UTF-8" />
   <title>به تاکام خوش آمدید</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
+  <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #a8e6cf, #dcedc1);
       color: #2e7d32;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.4rem;
+      max-width: 500px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+      line-height: 1.6;
     }
 
     .header-image-container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto 40px;
       border-radius: 20px;
       overflow: hidden;
@@ -37,36 +51,24 @@
       display: block;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.3rem;
-      max-width: 400px;
-      margin: 0 auto 40px;
-      font-weight: 500;
-    }
-
     .language-selector {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     .lang-btn {
-      flex: 1 1 120px;
+      flex: 1 1 140px;
       padding: 15px 0;
       border-radius: 12px;
       background-color: #81c784;
       color: white;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
       transition: background-color 0.3s ease, transform 0.2s ease;
       user-select: none;
     }
@@ -75,32 +77,41 @@
       background-color: #66bb6a;
       transform: scale(1.05);
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQWD8WE2Q7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQWD8WE2Q7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VQWD8WE2Q7');
+  </script>
+</head>
+<body>
 
-  gtag('config', 'G-VQWD8WE2Q7');
-</script>
-  </head>
-  <body>
   <h1>به تاکام خوش آمدید</h1>
+
   <div class="header-image-container">
-    <img src="header-image.jpg" alt="wheat fields of Pirben at sunrise">
+    <img src="https://i.imgur.com/WkDZ0HJ.jpg" alt="مزارع گندم تاکام در طلوع خورشید">
   </div>
 
- 
-  <p>روستایی زیبا در قلب جنگلهای مازندران</p>
+  <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از طبیعت، آرامش و اصالت.</p>
 
   <div class="language-selector">
     <a href="index.fa.html" class="lang-btn" lang="fa" hreflang="fa">فارسی</a>
     <a href="index.en.html" class="lang-btn" lang="en" hreflang="en">English</a>
-    <a href="index.ma.html" class="lang-btn" lang="es" hreflang="ma">گلکی</a>
-    <a href="Takam/contact.html" class="lang-btn" lang="en" hreflang="en">Contact</a>
+    <a href="index.ma.html" class="lang-btn" lang="glk" hreflang="ma">گلکی</a>
+    <a href="Takam/contact.html" class="lang-btn" lang="en" hreflang="en">تماس</a>
   </div>
 
 </body>
