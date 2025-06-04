@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <title>به تاکام خوش آمدید</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- فونت‌های مورد نیاز -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fontlibrary.org//face/iran-nastaliq" rel="stylesheet" type="text/css"/>
 
   <style>
     body {
@@ -17,9 +20,16 @@
     }
 
     h1 {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-      font-weight: 700;
+      font-family: 'IranNastaliq', serif;
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      direction: rtl;
+    }
+
+    h1 .highlight {
+      font-size: 4rem;
+      color: #d84315;
+      font-weight: bold;
     }
 
     p {
@@ -80,7 +90,10 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+      }
+      h1 .highlight {
+        font-size: 3rem;
       }
       p {
         font-size: 1.1rem;
@@ -99,7 +112,7 @@
 </head>
 <body>
 
-  <h1>به تاکام خوش آمدید</h1>
+  <h1>به <span class="highlight">تاکام</span> خوش آمدید</h1>
 
   <div class="header-image-container">
     <img src="https://i.imgur.com/WkDZ0HJ.jpg" alt="مزارع گندم تاکام در طلوع خورشید">
