@@ -63,7 +63,7 @@
       border: 2px solid #a5ccb6;
       border-radius: 15px;
       padding: 25px 20px;
-      width: 250px;
+      width: 300px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -87,19 +87,11 @@
       margin-bottom: 15px;
     }
 
-    .poem-link {
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #679b79;
-      padding: 10px 24px;
+    .video-wrapper video {
+      width: 100%;
       border-radius: 10px;
-      font-size: 16px;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
-
-    .poem-link:hover {
-      background-color: #4d7f62;
+      border: 1px solid #ccc;
+      margin-top: 10px;
     }
 
     .footer-img {
@@ -137,9 +129,13 @@
     <div class="poem-card">
       <div class="poem-icon">🎬</div>
       <div class="poem-title">تجن و شالیزارها</div>
-      <a href="V1.fa.html" class="poem-link">تماشای فیلم</a>
+      <div class="video-wrapper">
+        <video controls poster="https://i.imgur.com/0XcvKCE.jpeg">
+          <source src="https://i.imgur.com/vsFt1dF.mp4" type="video/mp4" />
+          مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+        </video>
+      </div>
     </div>
-    <!-- فیلم‌های بیشتر را می‌توان بعداً اضافه کرد -->
   </section>
 
   <div class="footer-img">
