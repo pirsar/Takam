@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <title>به تاکام خوش آمدید</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- فونت‌ها -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fontlibrary.org//face/iran-nastaliq" rel="stylesheet" type="text/css"/>
 
@@ -20,27 +18,26 @@
       direction: rtl;
     }
 
-    /* کادر زیبا برای عنوان */
-    h1.welcome-box {
+    .title-box {
+      background-color: #a5d6a7;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       display: inline-block;
-      background: #e6f2e6;
-      padding: 18px 30px;
-      border-radius: 25px;
-      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      line-height: 1.5;
-      user-select: none;
     }
 
-    /* حذف خط زیر لینک تاکام */
-    h1.welcome-box a.highlight {
+    .highlight {
       font-family: 'IranNastaliq', serif;
       font-size: 3.5rem;
       color: #2e7d32;
-      display: inline-block;
+      display: block;
       text-decoration: none;
-      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
     }
 
     p {
@@ -66,29 +63,24 @@
       display: block;
     }
 
-    /* ردیف زبان‌ها کنار هم */
-    .language-row {
+    .language-selector {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-bottom: 15px;
       flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .lang-btn {
       background-color: #81c784;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 18px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      user-select: none;
     }
 
     .lang-btn:hover {
@@ -96,159 +88,127 @@
       transform: scale(1.05);
     }
 
-    /* دکمه تماس کمی پایین‌تر و متفاوت */
-    .contact-row {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-
     .contact-btn {
+      margin-top: 20px;
       background-color: #4caf50;
-      box-shadow: 0 4px 12px rgba(76,175,80,0.4);
-      font-weight: 700;
-    }
-
-    .contact-btn:hover {
-      background-color: #388e3c;
-    }
-
-    /* استایل پنجره شناور (modal) */
-    .modal {
-      display: none; /* مخفی در ابتدا */
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80vw;
-      max-width: 900px;
-      height: 60vh;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      z-index: 1000;
-      overflow: hidden;
-    }
-
-    .modal iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 15px;
-    }
-
-    /* بک‌گراند تار وقتی modal باز است */
-    .modal-backdrop {
-      display: none; /* مخفی در ابتدا */
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 900;
-    }
-
-    /* دکمه بستن modal */
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 16px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      font-size: 1.2rem;
-      padding: 6px 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-      z-index: 1100;
-    }
-
-    .modal-close:hover {
-      background-color: #1b4d20;
     }
 
     @media (max-width: 600px) {
-      h1.welcome-box {
-        font-size: 1.8rem;
-        padding: 12px 20px;
-      }
-      h1.welcome-box a.highlight {
+      .highlight {
         font-size: 2.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
       }
       p {
         font-size: 1.1rem;
       }
-      .lang-btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      .modal {
-        width: 95vw;
-        height: 50vh;
-      }
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 0;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      height: 80%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .modal-header button {
+      float: left;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100% - 40px);
+      border: none;
     }
   </style>
 </head>
 
 <body>
 
-  <h1 class="welcome-box">
-    به <a class="highlight" id="openModalBtn">تاکام</a> خوش آمدید
-  </h1>
-
-  <div class="language-row">
-    <a href="index.fa.html" class="lang-btn" hreflang="fa" title="فارسی">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Lion_and_Sun_Flag.png" alt="پرچم شیر و خورشید" style="height: 20px; vertical-align: middle;"> فارسی
-    </a>
-    <a href="index.en.html" class="lang-btn" hreflang="en" title="English">🇬🇧 English</a>
-    <a href="index.gl.html" class="lang-btn" hreflang="glk" title="گلکی">🌿 گلکی</a>
-  </div>
-
-  <div class="contact-row">
-    <a href="contact.html" class="lang-btn contact-btn" hreflang="fa" title="تماس">📬 تماس</a>
+  <div class="title-box">
+    <h1>به <a href="#" class="highlight" id="openMap">تاکام</a> خوش آمدید</h1>
   </div>
 
   <div class="header-image-container">
     <img src="https://i.imgur.com/1rPtKQI.jpeg" alt="مزارع گندم تاکام در طلوع خورشید">
   </div>
 
-  <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از زیباییهای طبیعت، آرامش و طراوت</p>
+  <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از زیبایی‌های طبیعت، آرامش و طراوت.</p>
 
-  <!-- بک‌گراند تار -->
-  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="language-selector">
+    <a href="index.fa.html" class="lang-btn" hreflang="fa">
+      🇮🇷 فارسی
+    </a>
+    <a href="index.en.html" class="lang-btn" hreflang="en">
+      🇬🇧 English
+    </a>
+    <a href="index.gl.html" class="lang-btn" hreflang="glk">
+      🌿 گلکی
+    </a>
+  </div>
 
-  <!-- پنجره شناور -->
-  <div class="modal" id="modalWindow">
-    <button class="modal-close" id="closeModalBtn" aria-label="بستن پنجره">×</button>
-<iframe src="https://topomap.ir/?l=ghy&n=2377055065" title="نقشه تاکام"></iframe>
+  <div class="language-selector">
+    <a href="contact.html" class="lang-btn contact-btn" hreflang="fa">📬 تماس با ما</a>
+  </div>
+
+  <!-- Modal -->
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="closeModal">✖ بازگشت</button>
+      </div>
+      <iframe src="https://topomap.ir/?lat=36.3554901&lon=53.1647311&z=15&l=ghy" title="نقشه تاکام"></iframe>
+    </div>
   </div>
 
   <script>
-    const openBtn = document.getElementById('openModalBtn');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const modal = document.getElementById('modalWindow');
-    const backdrop = document.getElementById('modalBackdrop');
+    const modal = document.getElementById("mapModal");
+    const openBtn = document.getElementById("openMap");
+    const closeBtn = document.getElementById("closeModal");
 
-    openBtn.addEventListener('click', () => {
-      modal.style.display = 'block';
-      backdrop.style.display = 'block';
-      // جلوگیری از اسکرول صفحه پس‌زمینه
-      document.body.style.overflow = 'hidden';
+    openBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      modal.style.display = "block";
     });
 
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      backdrop.style.display = 'none';
-      document.body.style.overflow = 'auto';
+    closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
     });
 
-    // کلیک روی پس‌زمینه تار هم پنجره را ببندد
-    backdrop.addEventListener('click', () => {
-      modal.style.display = 'none';
-      backdrop.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   </script>
-
 </body>
-</html
+</html>
