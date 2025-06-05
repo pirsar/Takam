@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>نمایش نقشه تاپومپ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      background-color: #f0f0f0;
+    }
+    .top-bar {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 52px); /* کل ارتفاع صفحه منهای نوار بالا */
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>نمایش نقشه تاکام</span>
+    <a href="index.html">🔙 بازگشت</a>
+  </div>
+  <iframe src="https://topomap.ir/?n=2377055065&l=ghy" allowfullscreen></iframe>
+</body>
+</html>
