@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>فیلم‌</title>
+  <style>
+    body {
+      direction: rtl;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #f9fcf9, #eaf5ea);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background-color: #e0f0e7;
+      border-bottom: 2px solid #b3d4c0;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 32px;
+      color: #2c5f45;
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 22px;
+      color: #3a7544;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #2c5f45;
+    }
+
+    .back-link::before {
+      content: "🏠";
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .poem-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    .poem-card {
+      background-color: #ffffff;
+      border: 2px solid #a5ccb6;
+      border-radius: 15px;
+      padding: 25px 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .poem-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    .poem-icon {
+      font-size: 60px;
+      color: #4d7f62;
+      margin-bottom: 20px;
+    }
+
+    .poem-title {
+      font-size: 24px;
+      color: #2f4f3d;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .poem-link {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #679b79;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .poem-link:hover {
+      background-color: #4d7f62;
+    }
+
+    .footer-img {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f2f9f4;
+    }
+
+    .footer-img img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #c2dfd0;
+    }
+
+    @media (max-width: 600px) {
+      .poem-card {
+        width: 90%;
+      }
+      .back-link {
+        position: static;
+        margin: 20px auto 0;
+        display: inline-flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back-link" href="/Takam/index.fa.html">خانه</a>
+    <h1>فیلم‌</h1>
+  </header>
+
+  <section class="poem-list">
+    <div class="poem-card">
+      <div class="poem-icon">🎬</div>
+      <div class="poem-title">تاکام در مه</div>
+      <a href="V1.fa.html" class="poem-link">تماشای فیلم</a>
+    </div>
+    <!-- فیلم‌های بیشتر را می‌توان بعداً اضافه کرد -->
+  </section>
+
+  <div class="footer-img">
+    <img src="https://i.imgur.com/0XcvKCE.jpeg" alt="تصویر فیلم‌برداری از تاکام" />
+  </div>
+</body>
+</html>
