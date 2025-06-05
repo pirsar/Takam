@@ -39,7 +39,8 @@
       font-size: 3.5rem;
       color: #2e7d32;
       display: inline-block;
-      text-decoration: none; /* حذف خط زیر لینک */
+      text-decoration: none;
+      cursor: pointer;
     }
 
     p {
@@ -103,13 +104,67 @@
     }
 
     .contact-btn {
-      background-color: #4caf50; /* سبز متفاوت */
+      background-color: #4caf50;
       box-shadow: 0 4px 12px rgba(76,175,80,0.4);
       font-weight: 700;
     }
 
     .contact-btn:hover {
       background-color: #388e3c;
+    }
+
+    /* استایل پنجره شناور (modal) */
+    .modal {
+      display: none; /* مخفی در ابتدا */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      max-width: 900px;
+      height: 60vh;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 15px;
+    }
+
+    /* بک‌گراند تار وقتی modal باز است */
+    .modal-backdrop {
+      display: none; /* مخفی در ابتدا */
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 900;
+    }
+
+    /* دکمه بستن modal */
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      padding: 6px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      z-index: 1100;
+    }
+
+    .modal-close:hover {
+      background-color: #1b4d20;
     }
 
     @media (max-width: 600px) {
@@ -127,23 +182,19 @@
         padding: 8px 12px;
         font-size: 0.9rem;
       }
+      .modal {
+        width: 95vw;
+        height: 50vh;
+      }
     }
   </style>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5D2B3PGCC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K5D2B3PGCC');
-</script>
-
 <body>
 
-  <h1 class="welcome-box">به <a href="https://topomap.ir/?n=2377055065&l=ghy" class="highlight" target="_blank" rel="noopener noreferrer">تاکام</a> خوش آمدید</h1>
+  <h1 class="welcome-box">
+    به <a class="highlight" id="openModalBtn">تاکام</a> خوش آمدید
+  </h1>
 
   <div class="language-row">
     <a href="index.fa.html" class="lang-btn" hreflang="fa" title="فارسی">
@@ -163,5 +214,41 @@
 
   <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از زیباییهای طبیعت، آرامش و طراوت</p>
 
+  <!-- بک‌گراند تار -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- پنجره شناور -->
+  <div class="modal" id="modalWindow">
+    <button class="modal-close" id="closeModalBtn" aria-label="بستن پنجره">×</button>
+    <iframe src="https://topomap.ir/?n=2377055065&l=ghy" title="نقشه تاکام"></iframe>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('modalWindow');
+    const backdrop = document.getElementById('modalBackdrop');
+
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+      backdrop.style.display = 'block';
+      // جلوگیری از اسکرول صفحه پس‌زمینه
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      backdrop.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    // کلیک روی پس‌زمینه تار هم پنجره را ببندد
+    backdrop.addEventListener('click', () => {
+      modal.style.display = 'none';
+      backdrop.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  </script>
+
 </body>
-</html>
+</html
