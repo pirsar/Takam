@@ -2,11 +2,11 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>موسیقی مازندران</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #fdfcfb, #d6ccc2);
+      background: linear-gradient(135deg, #f0f4f8, #d6ccc2);
       font-family: "Tahoma", sans-serif;
       color: #333;
       margin: 0;
@@ -20,39 +20,113 @@
       background-position: center;
       padding: 70px 20px;
       color: white;
-      text-shadow: 2px 2px 4px #000;
-    }
-    header h1 {
-      font-size: 2.3em;
-      margin: 0;
+      text-shadow: 2px 2px 5px #000;
+      font-weight: bold;
+      font-size: 2.5em;
     }
     main {
-      padding: 30px 20px;
-      font-size: 1.2em;
-      line-height: 2;
       max-width: 700px;
-      margin: auto;
+      margin: 30px auto 60px;
+      padding: 0 15px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 25px;
+      text-decoration: none;
+      color: #5a4e42;
+      font-weight: 600;
+      border: 2px solid #5a4e42;
+      padding: 8px 18px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(90,78,66,0.2);
+    }
+    .back-link:hover {
+      background-color: #5a4e42;
+      color: #fff;
+      box-shadow: 0 6px 15px rgba(90,78,66,0.4);
+    }
+    p.description {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+    .audio-card {
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 20px 25px 30px;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .audio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
     audio {
-      margin-top: 20px;
       width: 100%;
-      max-width: 400px;
+      outline: none;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .track-name {
+      margin-top: 15px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #5a4e42;
+      user-select: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>موسیقی مازندران</h1>
+    موسیقی مازندران
   </header>
   <main>
-    <p>موسیقی مازندرون، نَغمه‌ی دِل .</p>
+    <a href="صفحه-قبلی.html" class="back-link">← بازگشت به صفحه قبل</a>
 
-    <audio controls>
-      <source src="D1737138T17034174(Web).mp4" type="audio/mp4" />
-      مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
-    </audio>
-    
-    <p style="font-size: 0.9em; color: #666;">آریا کبیری -۱</p>
+    <p class="description">موسیقی مازندرون، نَغمه‌ی دِل</p>
+
+    <div class="audio-card">
+      <audio controls>
+        <source src="Mu/D1737138T17034174(Web).mp4" type="audio/mp4" />
+        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+      </audio>
+      <p class="track-name">آریا کبیری ۱</p>
+    </div>
+
+    <div class="audio-card">
+      <audio controls>
+        <source src="Mu/D1737138T17035447(Web).mp4" type="audio/mp4" />
+        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+      </audio>
+      <p class="track-name">آریا کبیری ۲</p>
+    </div>
+
+    <div class="audio-card">
+      <audio controls>
+        <source src="Mu/D1737138T17036697(Web).mp4" type="audio/mp4" />
+        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+      </audio>
+      <p class="track-name">آریا کبیری ۳</p>
+    </div>
+
+    <div class="audio-card">
+      <audio controls>
+        <source src="Mu/D1737138T17037844(Web).mp4" type="audio/mp4" />
+        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+      </audio>
+      <p class="track-name">آریا کبیری ۴</p>
+    </div>
+
+    <div class="audio-card">
+      <audio controls>
+        <source src="Mu/D1737138T17039124(Web).mp4" type="audio/mp4" />
+        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+      </audio>
+      <p class="track-name">آریا کبیری ۵</p>
+    </div>
   </main>
 </body>
 </html>
