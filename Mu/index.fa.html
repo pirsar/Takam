@@ -1,51 +1,161 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>موسیقی مازندران</title>
+  <meta charset="UTF-8">
+  <title>فیلم‌های تاکام</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #fdfcfb, #d6ccc2);
-      font-family: "Tahoma", sans-serif;
-      color: #333;
-      margin: 0;
-      padding: 0;
       direction: rtl;
-      text-align: center;
-    }
-    header {
-      background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Mazandaran_nature.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 70px 20px;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-    }
-    header h1 {
-      font-size: 2.3em;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
       margin: 0;
+      background: linear-gradient(to bottom, #f0f8f5, #e2f0eb);
+      color: #2f4f3d;
     }
-    main {
-      padding: 30px 20px;
-      font-size: 1.2em;
-      line-height: 2;
-      max-width: 700px;
-      margin: auto;
+
+    header {
+      background-color: #d2efe1;
+      padding: 30px 20px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 2px solid #aad1be;
     }
-    audio {
-      margin-top: 20px;
+
+    header h1 {
+      font-size: 30px;
+      margin: 0;
+      color: #265c47;
+    }
+
+    .back-link {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 18px;
+      color: #1d6b50;
+      text-decoration: none;
+      background-color: #c5e7d7;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #aad1be;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .video-card {
+      background: #ffffff;
+      border: 2px solid #a3d1be;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .video-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #2d5944;
+    }
+
+    .video-card p {
+      font-size: 15px;
+      color: #4d6f5a;
+      margin-top: 5px;
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      max-width: 400px;
+      height: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #608c75;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .back-link {
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+
+      .video-card h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>موسیقی مازندران</h1>
+    <a href="/Takam/index.fa.html" class="back-link">🏠 بازگشت به خانه</a>
+    <h1>فیلم‌های تاکام</h1>
   </header>
-  <main>
-    <p>موسیقی مازرون، نَغمه‌ی دِل هستـه.<br>
-    وقتی دتار بَزنه، دل وَرنه آسمون دله.</p>
+
+  <div class="container">
+
+    <!-- فیلم اول -->
+    <div class="video-card">
+      <h2>گندمجارهای تاکام</h2>
+      <p>
+        گندمزارهای طلایی، گسترده بر تپه‌های بلند، گویی شعر خاموشی هستند که با باد به زبان می‌آیند؛ اینجا تاکام است، سرزمین گندم و نور.
+      </p>
+      <div class="iframe-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/E57ZKpNl-Fk" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- فیلم دوم -->
+    <div class="video-card">
+      <h2>تجن و شالیزارهای تاکام</h2>
+      <p>
+        نغمه‌ی آب در بستر رود تجن و رقص سبز شالیزارها در نسیم بهاری، نمایی از هماهنگی طبیعت و زندگی را به تصویر می‌کشد.
+      </p>
+      <div class="iframe-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/Z1batG2pGAI" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 روستای تاکام - برای معرفی طبیعت، فرهنگ و مردم
+  </footer>
+
 </body>
 </html>
