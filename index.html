@@ -26,11 +26,14 @@
       line-height: 1.8;
     }
 
+    /* حذف خط زیر کلمه تاکام */
     .highlight {
       font-family: 'IranNastaliq', serif;
       font-size: 3.5rem;
       color: #2e7d32;
-      display: block;
+      display: inline-block; /* inline-block برای لینک */
+      cursor: pointer;
+      text-decoration: none; /* حذف خط زیر */
     }
 
     p {
@@ -81,6 +84,64 @@
       transform: scale(1.05);
     }
 
+    /* استایل پنجره مودال (شناور) */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.show {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: white;
+      width: 80vw;
+      max-width: 900px;
+      height: 60vh;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* دکمه بستن */
+    .modal-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #444;
+      font-weight: bold;
+      z-index: 10;
+      transition: color 0.2s ease;
+    }
+    .modal-close-btn:hover {
+      color: #2e7d32;
+    }
+
+    /* iframe داخل modal */
+    .modal-content iframe {
+      border: none;
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
@@ -91,22 +152,18 @@
       p {
         font-size: 1.1rem;
       }
+
+      .modal-content {
+        width: 95vw;
+        height: 70vh;
+      }
     }
   </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5D2B3PGCC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-K5D2B3PGCC');
-</script>
-  
-  <body>
+<body>
 
-<h1>به <a href="https://topomap.ir/?n=2377055065&l=ghy" class="highlight" target="_blank">تاکام</a> خوش آمدید</h1>
+  <h1>به <a href="#" class="highlight" id="openModal">تاکام</a> خوش آمدید</h1>
 
   <div class="header-image-container">
     <img src="https://i.imgur.com/1rPtKQI.jpeg" alt="مزارع گندم تاکام در طلوع خورشید">
@@ -115,12 +172,50 @@
   <p>روستایی زیبا در قلب جنگل‌های مازندران، سرشار از زیباییهای طبیعت، آرامش و طراوت</p>
 
   <div class="language-selector">
-<a href="index.fa.html" class="lang-btn" hreflang="fa">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Lion_and_Sun_Flag.png" alt="پرچم شیر و خورشید" style="height: 20px; vertical-align: middle; margin-left: 8px;"> فارسی</a>
+    <a href="index.fa.html" class="lang-btn" hreflang="fa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Lion_and_Sun_Flag.png" alt="پرچم شیر و خورشید" style="height: 20px; vertical-align: middle; margin-left: 8px;"> فارسی
+    </a>
     <a href="index.en.html" class="lang-btn" hreflang="en">🇬🇧 English</a>
     <a href="index.gl.html" class="lang-btn" hreflang="glk">🌿 گلکی</a>
     <a href="contact.html" class="lang-btn" hreflang="fa">📬 تماس</a>
   </div>
+
+  <!-- پنجره مودال -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeModal" aria-label="بستن پنجره">×</button>
+      <iframe src="https://topomap.ir/?n=2377055065&l=ghy" title="نقشه تاکام"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modal = document.getElementById('modal');
+
+    openModalBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      modal.classList.add('show');
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+      modal.classList.remove('show');
+    });
+
+    // بستن مودال با کلیک بیرون از محتوا
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+
+    // بستن مودال با کلید Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape" && modal.classList.contains('show')) {
+        modal.classList.remove('show');
+      }
+    });
+  </script>
 
 </body>
 </html>
