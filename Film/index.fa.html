@@ -1,145 +1,128 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <title>فیلم‌</title>
+  <meta charset="UTF-8">
+  <title>فیلم‌های تاکام</title>
   <style>
     body {
       direction: rtl;
       font-family: "Vazirmatn", Tahoma, sans-serif;
-      background: linear-gradient(to bottom, #f9fcf9, #eaf5ea);
       margin: 0;
-      padding: 0;
+      background: linear-gradient(to bottom, #f0f8f5, #e2f0eb);
+      color: #2f4f3d;
     }
 
     header {
+      background-color: #d2efe1;
+      padding: 30px 20px 20px;
       text-align: center;
-      padding: 50px 20px 20px;
-      background-color: #e0f0e7;
-      border-bottom: 2px solid #b3d4c0;
       position: relative;
+      border-bottom: 2px solid #aad1be;
     }
 
     header h1 {
-      font-size: 32px;
-      color: #2c5f45;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin: 0;
+      color: #265c47;
     }
 
     .back-link {
       position: absolute;
-      top: 15px;
-      left: 20px;
-      font-size: 22px;
-      color: #3a7544;
+      right: 20px;
+      top: 20px;
+      font-size: 18px;
+      color: #1d6b50;
       text-decoration: none;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.3s ease;
+      background-color: #c5e7d7;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
 
     .back-link:hover {
-      color: #2c5f45;
+      background-color: #aad1be;
     }
 
-    .back-link::before {
-      content: "🏠";
-      font-size: 28px;
-      line-height: 1;
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    .poem-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 40px 20px;
-    }
-
-    .poem-card {
-      background-color: #ffffff;
-      border: 2px solid #a5ccb6;
+    .video-card {
+      background: #ffffff;
+      border: 2px solid #a3d1be;
       border-radius: 15px;
-      padding: 25px 20px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .poem-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    .video-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #2d5944;
     }
 
-    .poem-icon {
-      font-size: 60px;
-      color: #4d7f62;
-      margin-bottom: 20px;
-    }
-
-    .poem-title {
-      font-size: 24px;
-      color: #2f4f3d;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .video-wrapper video {
+    video {
       width: 100%;
       border-radius: 10px;
+      margin-top: 15px;
       border: 1px solid #ccc;
-      margin-top: 10px;
     }
 
-    .footer-img {
+    footer {
       text-align: center;
-      padding: 40px 20px;
-      background-color: #f2f9f4;
-    }
-
-    .footer-img img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      border: 2px solid #c2dfd0;
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #608c75;
     }
 
     @media (max-width: 600px) {
-      .poem-card {
-        width: 90%;
+      header h1 {
+        font-size: 24px;
       }
+
       .back-link {
-        position: static;
-        margin: 20px auto 0;
-        display: inline-flex;
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+
+      .video-card h2 {
+        font-size: 20px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <a class="back-link" href="/Takam/index.fa.html">خانه</a>
-    <h1>فیلم‌</h1>
+    <a href="/Takam/index.fa.html" class="back-link">🏠 بازگشت به خانه</a>
+    <h1>فیلم‌های تاکام</h1>
   </header>
 
-  <section class="poem-list">
-    <div class="poem-card">
-      <div class="poem-icon">🎬</div>
-      <div class="poem-title">تجن و شالیزارها</div>
-      <div class="video-wrapper">
-        <video controls poster="https://i.imgur.com/0XcvKCE.jpeg">
-          <source src="https://i.imgur.com/vsFt1dF.mp4" type="video/mp4" />
-          مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-        </video>
-      </div>
-    </div>
-  </section>
+  <div class="container">
 
-  <div class="footer-img">
-    <img src="https://i.imgur.com/0XcvKCE.jpeg" alt="تصویر فیلم‌برداری از تاکام" />
+    <!-- ویدیو اول -->
+    <div class="video-card">
+      <h2>تجن و شالیزارها</h2>
+      <video controls poster="https://i.imgur.com/0XcvKCE.jpeg">
+        <source src="https://i.imgur.com/vsFt1dF.mp4" type="video/mp4">
+        مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+
+    <!-- جای ویدیوهای بعدی -->
+    <div class="video-card">
+      <h2>عنوان فیلم بعدی</h2>
+      <p>به‌زودی...</p>
+    </div>
+
   </div>
+
+  <footer>
+    © 2025 روستای تاکام - طراحی شده با عشق برای معرفی طبیعت و فرهنگ
+  </footer>
+
 </body>
 </html>
