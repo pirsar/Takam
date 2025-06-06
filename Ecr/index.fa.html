@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نوشته‌های تاکام</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom, #fcfaf6, #f1ede5);
+      margin: 0;
+      padding: 0;
+      color: #2f2a2a;
+    }
+
+    header {
+      background-color: #704830;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fffdf9;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    a.home-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      color: #704830;
+      border: 1px solid #704830;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    a.home-link:hover {
+      background-color: #704830;
+      color: white;
+    }
+
+    h2 {
+      color: #3c2f2f;
+      margin-bottom: 1rem;
+    }
+
+    .post-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .post-item {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-right: 4px solid #704830;
+      background-color: #faf6f1;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .post-item:hover {
+      background-color: #f0e7dd;
+    }
+
+    .post-item a {
+      text-decoration: none;
+      color: #3c2f2f;
+      font-size: 1.2rem;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+      color: #857465;
+      margin-top: 0.3rem;
+    }
+
+    .language-switcher {
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .language-switcher a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #704830;
+    }
+
+    .language-switcher a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem;
+        margin: 1rem;
+      }
+
+      header {
+        font-size: 1.4rem;
+      }
+
+      .post-item a {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    نوشته‌های روستای تاکام
+  </header>
+
+  <div class="container">
+    <a href="home.html" class="home-link">🏠 خانه</a>
+
+    <div class="language-switcher">
+      <span>🌐 زبان‌ها:</span>
+      <a href="index.html">English</a>
+      <a href="#">فارسی</a>
+    </div>
+
+    <h2>فهرست مطالب</h2>
+    <ul class="post-list">
+      <li class="post-item">
+        <a href="takam-cows-and-customs-fa.html">
+          در ذکر آداب مردمان تاکام و سیرت نیکو در بده بستان با گاوان
+        </a>
+        <div class="post-date">۱۷ خرداد ۱۴۰۴</div>
+      </li>
+
+      <li class="post-item">
+        <a href="#">ریکا</a>
+        <div class="post-date">به‌زودی</div>
+      </li>
+
+      <li class="post-item">
+        <a href="#"> از جنگل تا تنور: برگی از زندگی روستا</a>
+        <div class="post-date">به‌زودی</div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
