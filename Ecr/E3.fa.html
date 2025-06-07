@@ -142,80 +142,64 @@
   این معنا با ویژگی‌های طبیعی و تاریخی روستا هماهنگی کامل دارد و بهترین تفسیر ممکن برای ریشه نام «تاکام» محسوب می‌شود.
 </p>
 
-<!-- 🔻 بازخورد خوانندگان -->
-<div style="text-align:center; margin-top:50px; font-family:sans-serif;">
+<!-- لینک به Font Awesome برای آیکون‌ها -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <h3>نظرتان درباره این مطلب؟</h3>
-
-  <!-- 👍👎 Like / Dislike -->
-  <button onclick="vote('up')" style="font-size: 24px; padding: 10px;">👍</button>
-  <span id="up-count">0</span>
-
-  &nbsp;&nbsp;&nbsp;
-
-  <button onclick="vote('down')" style="font-size: 24px; padding: 10px;">👎</button>
-  <span id="down-count">0</span>
-
-  <!-- 💬 نظر بدهید -->
-  <div style="margin-top: 20px;">
-    <a href="#comments" style="text-decoration: none; color: #444; border: 1px solid #ccc; padding: 8px 14px; border-radius: 5px; background-color: #f9f9f9;">
-      💬 نظر بدهید
-    </a>
-  </div>
-
-  <!-- 📤 اشتراک‌گذاری -->
-  <div style="margin-top: 15px;">
-    <a href="https://t.me/share/url?url=https://pirsar.github.io/Takam/Ecr/E3.fa.html"
-       target="_blank"
-       style="text-decoration: none; color: white; background-color: #2ca5e0; padding: 8px 14px; border-radius: 5px;">
-      📤 اشتراک در تلگرام
-    </a>
-  </div>
+<!-- دکمه‌های لایک و دیسلایک -->
+<div style="margin-top: 30px; text-align: center;">
+  <button id="likeBtn" style="font-size: 18px; margin: 5px;">
+    <i class="fa fa-thumbs-up"></i> لایک (<span id="likeCount">0</span>)
+  </button>
+  <button id="dislikeBtn" style="font-size: 18px; margin: 5px;">
+    <i class="fa fa-thumbs-down"></i> دیسلایک (<span id="dislikeCount">0</span>)
+  </button>
 </div>
 
-<!-- 📦 اسکریپت ذخیره رأی -->
+<!-- دکمه اشتراک‌گذاری در تلگرام -->
+<div style="margin-top: 20px; text-align: center;">
+  <a href="https://t.me/share/url?url=https://pirsar.github.io/Takam/Ecr/E3.fa.html&text=مقاله‌ای جالب برای مطالعه"
+     target="_blank" style="font-size: 18px; text-decoration: none;">
+    <i class="fa fa-paper-plane"></i> اشتراک‌گذاری در تلگرام
+  </a>
+</div>
+
+<!-- بخش نظردهی Disqus -->
+<div id="disqus_thread" style="margin-top: 40px;"></div>
 <script>
-  const id = "E3.fa"; // شناسه مقاله – اختصاصی برای هر مقاله باشد
-  const upKey = `up-${id}`;
-  const downKey = `down-${id}`;
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://takamsite.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>لطفاً جاوااسکریپت را برای مشاهده نظرات فعال کنید.</noscript>
 
-  const upCount = localStorage.getItem(upKey) || 0;
-  const downCount = localStorage.getItem(downKey) || 0;
+<!-- اسکریپت لایک و دیسلایک -->
+<script>
+  // بازیابی تعداد لایک و دیسلایک از localStorage
+  let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+  let dislikeCount = parseInt(localStorage.getItem('dislikeCount')) || 0;
+  document.getElementById('likeCount').textContent = likeCount;
+  document.getElementById('dislikeCount').textContent = dislikeCount;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("up-count").innerText = upCount;
-    document.getElementById("down-count").innerText = downCount;
+  // افزودن رویداد کلیک به دکمه لایک
+  document.getElementById('likeBtn').addEventListener('click', function() {
+    likeCount++;
+    localStorage.setItem('likeCount', likeCount);
+    document.getElementById('likeCount').textContent = likeCount;
   });
 
-  function vote(type) {
-    let key = type === 'up' ? upKey : downKey;
-    let spanId = type === 'up' ? 'up-count' : 'down-count';
-    let count = parseInt(localStorage.getItem(key) || "0");
-    count++;
-    localStorage.setItem(key, count);
-    document.getElementById(spanId).innerText = count;
-  }
+  // افزودن رویداد کلیک به دکمه دیسلایک
+  document.getElementById('dislikeBtn').addEventListener('click', function() {
+    dislikeCount++;
+    localStorage.setItem('dislikeCount', dislikeCount);
+    document.getElementById('dislikeCount').textContent = dislikeCount;
+  });
 </script>
-
-<!-- 💬 بخش دیدگاه -->
-<div id="comments" style="margin-top: 60px; padding: 20px; background-color: #f4f4f4;">
-  <h4 style="margin-bottom: 10px;">دیدگاه‌ها</h4>
-  <p>اگر نظری درباره این مقاله دارید، لطفاً آن را در پیام‌رسان یا شبکه‌های اجتماعی با ما در میان بگذارید.</p>
-<script src="https://giscus.app/client.js"
-        data-repo="pirsar/Takam"
-        data-repo-id="R_kgDOO2Oj4g"
-        data-category="General"
-        data-category-id="DIC_kwDOO2Oj4s4CrJ_V"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light_protanopia"
-        data-lang="fa"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
 </body>
 </html>
