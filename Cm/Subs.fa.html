@@ -1,0 +1,43 @@
+<!-- فونت فارسی Vazirmatn -->
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
+<!-- Font Awesome برای آیکون‌ها -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- کادر دکمه‌های اشتراک‌گذاری -->
+<div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Vazirmatn', sans-serif; text-align: center;">
+
+  <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">اشتراک‌گذاری این مقاله:</p>
+
+  <!-- دکمه‌ها -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 20px;">
+
+    <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+      <i class="fab fa-telegram"></i> تلگرام
+    </a>
+
+    <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> واتساپ
+    </a>
+
+    <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+      <i class="fab fa-x-twitter"></i> توییتر
+    </a>
+
+    <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+      <i class="fa fa-envelope"></i> ایمیل
+    </a>
+
+  </div>
+</div>
+
+<!-- اسکریپت ساخت خودکار لینک‌ها -->
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("مطالعه این مقاله را پیشنهاد می‌کنم");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=مقاله‌ای جالب برای مطالعه&body=این مقاله را ببین: ${url}`;
+</script>
