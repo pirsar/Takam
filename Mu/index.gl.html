@@ -163,15 +163,20 @@
 
 <!-- اسکریپت ساخت خودکار لینک‌ها -->
 ‏<script>
-‏  const url = encodeURIComponent(window.location.href);
-‏  const text = encodeURIComponent("بخوندستن این مقاله ره پیشنهاد کمبه");
+  (function () {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("بخوندستن این مقاله ره پیشنهاد کمبه");
 
-‏  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
-‏  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
-‏  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-‏  document.getElementById("mail").href = `mailto:?subject=اتا خووش مقاله‌ بخوندستن وسته &body=این مقاله ره هارشین: ${url}`;
-‏</script>
+    const tg = document.getElementById("tg");
+    const wa = document.getElementById("wa");
+    const tw = document.getElementById("tw");
+    const mail = document.getElementById("mail");
 
-
+    if (tg) tg.href = `https://t.me/share/url?url=${url}&text=${text}`;
+    if (wa) wa.href = `https://wa.me/?text=${text}%20${url}`;
+    if (tw) tw.href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    if (mail) mail.href = `mailto:?subject=اتا خووش مقاله‌ بخوندستن وسته&body=این مقاله ره هارشین: ${url}`;
+  })();
+</script>
 </body>
 </html>
