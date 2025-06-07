@@ -142,35 +142,65 @@
   این معنا با ویژگی‌های طبیعی و تاریخی روستا هماهنگی کامل دارد و بهترین تفسیر ممکن برای ریشه نام «تاکام» محسوب می‌شود.
 </p>
 
-<!-- 🌟 بازخورد خوانندگان -->
-<div style="text-align: center; margin-top: 30px; font-family: sans-serif;">
-  <h3 style="margin-bottom: 10px;">بازخورد شما</h3>
+<!-- 🔻 بازخورد خوانندگان -->
+<div style="text-align:center; margin-top:50px; font-family:sans-serif;">
 
-  <!-- 👍/👎 Like / Dislike -->
-  <div class="likebtn-wrapper" data-theme="custom" data-ef_voting="push"
-       data-white_label="true" data-dislike_enabled="true"
-       data-share_enabled="false" data-icon_l="👍" data-icon_d="👎">
-  </div>
-  <script async src="https://w.likebtn.com/js/w.js"></script>
+  <h3>نظرتان درباره این مطلب؟</h3>
 
-  <!-- 💬 دیدگاه -->
-  <div style="margin-top: 15px;">
-    <a href="#comments" style="text-decoration: none; color: #444; border: 1px solid #ccc; padding: 6px 12px; border-radius: 5px; background-color: #f3f3f3;">
+  <!-- 👍👎 Like / Dislike -->
+  <button onclick="vote('up')" style="font-size: 24px; padding: 10px;">👍</button>
+  <span id="up-count">0</span>
+
+  &nbsp;&nbsp;&nbsp;
+
+  <button onclick="vote('down')" style="font-size: 24px; padding: 10px;">👎</button>
+  <span id="down-count">0</span>
+
+  <!-- 💬 نظر بدهید -->
+  <div style="margin-top: 20px;">
+    <a href="#comments" style="text-decoration: none; color: #444; border: 1px solid #ccc; padding: 8px 14px; border-radius: 5px; background-color: #f9f9f9;">
       💬 نظر بدهید
     </a>
   </div>
 
   <!-- 📤 اشتراک‌گذاری -->
-  <div style="margin-top: 10px;">
-    <a href="https://t.me/share/url?url=https://pirsar.github.io/Takam/Ecr/E3.fa.html" target="_blank"
-       style="text-decoration: none; color: white; background-color: #2ca5e0; padding: 6px 12px; border-radius: 5px;">
+  <div style="margin-top: 15px;">
+    <a href="https://t.me/share/url?url=https://pirsar.github.io/Takam/Ecr/E3.fa.html"
+       target="_blank"
+       style="text-decoration: none; color: white; background-color: #2ca5e0; padding: 8px 14px; border-radius: 5px;">
       📤 اشتراک در تلگرام
     </a>
   </div>
 </div>
-  <div id="comments" style="margin-top: 50px;">
-  <h4>دیدگاه‌ها</h4>
-  <p>اگر نظری درباره این مقاله دارید، خوشحال می‌شویم بدانیم.</p>
+
+<!-- 📦 اسکریپت ذخیره رأی -->
+<script>
+  const id = "E3.fa"; // شناسه مقاله – اختصاصی برای هر مقاله باشد
+  const upKey = `up-${id}`;
+  const downKey = `down-${id}`;
+
+  const upCount = localStorage.getItem(upKey) || 0;
+  const downCount = localStorage.getItem(downKey) || 0;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("up-count").innerText = upCount;
+    document.getElementById("down-count").innerText = downCount;
+  });
+
+  function vote(type) {
+    let key = type === 'up' ? upKey : downKey;
+    let spanId = type === 'up' ? 'up-count' : 'down-count';
+    let count = parseInt(localStorage.getItem(key) || "0");
+    count++;
+    localStorage.setItem(key, count);
+    document.getElementById(spanId).innerText = count;
+  }
+</script>
+
+<!-- 💬 بخش دیدگاه -->
+<div id="comments" style="margin-top: 60px; padding: 20px; background-color: #f4f4f4;">
+  <h4 style="margin-bottom: 10px;">دیدگاه‌ها</h4>
+  <p>اگر نظری درباره این مقاله دارید، لطفاً آن را در پیام‌رسان یا شبکه‌های اجتماعی با ما در میان بگذارید.</p>
 </div>
 </body>
 </html>
