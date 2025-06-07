@@ -177,24 +177,23 @@
     (d.head || d.body).appendChild(s);
   })();
 </script>
-<noscript>لطفاً جاوااسکریپت را برای مشاهده نظرات فعال کنید.</noscript>
+<noscript>لطفاً جاوااسکریپت را فعال کنید تا بتوانید نظرات را ببینید:
+  <a href="https://disqus.com/?ref_noscript" target="_blank">Disqus</a>
+</noscript>
 
 <!-- اسکریپت لایک و دیسلایک -->
 <script>
-  // بازیابی تعداد لایک و دیسلایک از localStorage
   let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
   let dislikeCount = parseInt(localStorage.getItem('dislikeCount')) || 0;
   document.getElementById('likeCount').textContent = likeCount;
   document.getElementById('dislikeCount').textContent = dislikeCount;
 
-  // افزودن رویداد کلیک به دکمه لایک
   document.getElementById('likeBtn').addEventListener('click', function() {
     likeCount++;
     localStorage.setItem('likeCount', likeCount);
     document.getElementById('likeCount').textContent = likeCount;
   });
 
-  // افزودن رویداد کلیک به دکمه دیسلایک
   document.getElementById('dislikeBtn').addEventListener('click', function() {
     dislikeCount++;
     localStorage.setItem('dislikeCount', dislikeCount);
