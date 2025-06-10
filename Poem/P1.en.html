@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Takom</title>
+  <style>
+    body {
+      direction: ltr;
+      font-family: "Vazirmatn", "Tahoma", sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e4efe7);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffffee;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border: 2px solid #a3c4aa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e6049;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .poem {
+      white-space: pre-line;
+      font-size: 22px;
+      color: #333;
+      line-height: 2.2;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #679b79;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-size: 24px;
+      transition: background-color 0.3s;
+    }
+
+    .back-link a:hover {
+      background-color: #4d7f62;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.en.html">Home</a>
+
+  <div class="container">
+    <h1>Takom</h1>
+    <div class="poem">
+I came to Takom, saw a lovely green paradise;  
+I knew it was God's handiwork—so wise.  
+
+To the north, the forest drapes like a lover's tress,  
+And the west with its trees stands proud in full dress.  
+
+The south is a golden plain, with dancing fields in tune,  
+And in the east, the Tajan flows, like wine in a silver spoon.  
+
+How sweet at dawn, the chirping of the jays,  
+They wake the hearts—such songs of bonds and praise!  
+
+The shepherds’ dogs and jackals cry and fight,  
+Yet peace is caught in ropes of morning light.  
+
+A thousand years Takom has stood, steadfast and grand,  
+While Rika, the stream, dreams of distant land.
+    </div>
+
+    <div class="back-link">
+      <a href="https://pirsar.github.io/Takam/index.en.html">Back to Homepage</a>
+    </div>
+  </div>
+
+  <p style="text-align: left; direction: ltr; font-family: sans-serif;">
+    Hassan Mousavi Takami<br>
+    Paris<br>
+    June 2025
+  </p>
+
+  <!-- Vazirmatn font -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Share buttons -->
+  <div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Vazirmatn', sans-serif; text-align: center;">
+    <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">Share this article:</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 20px;">
+      <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+        <i class="fab fa-x-twitter"></i> Twitter
+      </a>
+      <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+        <i class="fa fa-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("I recommend reading this beautiful poem about Takom!");
+
+    document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+    document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+    document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    document.getElementById("mail").href = `mailto:?subject=A beautiful poem to read&body=Check out this poem: ${url}`;
+  </script>
+
+</body>
+</html>
