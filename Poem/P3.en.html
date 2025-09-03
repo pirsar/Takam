@@ -1,131 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Night Vigil</title>
-    <style>
-        body {
-            font-family: Georgia, Times, serif;
-            line-height: 1.9;
-            direction: ltr; /* چپ به راست */
-            background: #fefcf3;
-            color: #2b2b2b;
-            padding: 30px 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night Vigil - Advanced Interactive</title>
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Georgia, Times, serif;
+    background: linear-gradient(to bottom, #0a0a1a, #1a1a2a);
+    color: #fefcf3;
+    overflow: hidden;
+    position: relative;
+}
+a.home-link {
+    display: inline-block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #a0c4ff;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 1px dashed #a0c4ff;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+    z-index: 10;
+}
+a.home-link:hover {
+    color: #72a0ff;
+    border-bottom: 1px solid #72a0ff;
+}
+p {
+    margin-bottom: 2em;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    transition: color 0.5s, text-shadow 0.5s, transform 0.3s;
+    position: relative;
+    z-index: 10;
+}
+p span.highlight {
+    color: #ffdd99;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+p span.highlight:hover {
+    color: #ffe4b5;
+    text-shadow: 0 0 12px #ffe4b5, 0 0 25px #ffdd99;
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        a.home-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            text-decoration: none;
-            color: #4a6fa5;
-            font-weight: bold;
-            font-size: 1.2em;
-            border-bottom: 1px dashed #4a6fa5;
-            transition: color 0.3s, border-bottom 0.3s;
-        }
+/* Stars & Floating Lights */
+.light-dot, .star {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.light-dot {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 200, 0.5);
+    animation: floatDot linear infinite;
+}
+.star {
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    animation: twinkle infinite;
+}
+@keyframes floatDot {
+    0% { transform: translateY(0px) translateX(0px); opacity: 0.5; }
+    50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+    100% { transform: translateY(0px) translateX(0px); opacity: 0.5; }
+}
+@keyframes twinkle {
+    0%,100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
 
-        a.home-link:hover {
-            color: #2a4a7a;
-            border-bottom: 1px solid #2a4a7a;
-        }
+/* Background layers for parallax */
+.background-layer {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-repeat: repeat;
+    z-index: 1;
+}
+#stars-layer {
+    background: radial-gradient(circle, white 1px, transparent 2px);
+    animation: moveStars 120s linear infinite;
+}
+@keyframes moveStars {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(50px,50px); }
+}
 
-        p {
-            margin-bottom: 2em;
-            text-align: justify;
-            text-justify: inter-word;
-        }
+/* Water animation */
+#water {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, #1a1a2a 0%, rgba(26,26,42,0) 80%);
+    z-index: 2;
+    overflow: hidden;
+}
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 50px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    bottom: 0;
+    animation: waveMove infinite linear;
+}
+.wave:nth-child(1) { animation-duration: 12s; bottom: 10px; }
+.wave:nth-child(2) { animation-duration: 18s; bottom: 20px; }
+@keyframes waveMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
-        span.highlight {
-            color: #b85c38;
-            font-weight: bold;
-        }
-    </style>
+/* Leaves animation */
+.leaf {
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background: rgba(34,139,34,0.6);
+    border-radius: 50%;
+    animation: leafFall linear infinite;
+}
+@keyframes leafFall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+</style>
 </head>
 <body>
 
-    <a href="https://pirsar.github.io/Takam/Poem/index.en.html" class="home-link">Home</a>
+<a href="https://pirsar.github.io/Takam/Poem/index.fa.html" class="home-link">Home</a>
 
-    <p>
-        <span class="highlight">Night Vigil</span>
-    </p>
+<div class="background-layer" id="stars-layer"></div>
+<div id="water">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
 
-    <p>
-        Nine years old, maybe ten,<br>
-        I was a boy full of imagination,<br>
-        with eyes that still feared no darkness,<br>
-        for in every shadow, they saw a hidden flame,<br>
-        a light carrying the whispers of the earth,<br>
-        saying: everything lives, everything speaks, everything feels longing and joy.
-    </p>
+<p><span class="highlight">Night Vigil</span></p>
 
-    <p>
-        It was night vigil. Occasionally, the cry of Gatbeva<br>
-        echoed through the rice fields:<br>
-        “Hey… Haaay…”<br>
-        a sound that made wind and leaves shiver,<br>
-        the wild boars retreated,<br>
-        and the night, in its silence, awakened like a calm, deep spring.
-    </p>
+<p>
+Nine years old, maybe ten,<br>
+I was a boy full of imagination,<br>
+with eyes that still feared no darkness,<br>
+for in every shadow, they saw a hidden flame,<br>
+a light carrying the whispers of the earth,<br>
+saying: everything lives, everything speaks, everything feels longing and joy.
+</p>
 
-    <p>
-        Gatbeva, with a felt hat and bright eyes,<br>
-        led me to a rice field where both humans and boars<br>
-        claimed their share,<br>
-        and I learned:<br>
-        the earth denies no child from its table;<br>
-        every drop of rain, every ear of grain, every gust of wind has its right.
-    </p>
+<p>
+It was night vigil. Occasionally, the cry of Gatbeva<br>
+echoed through the rice fields:<br>
+“Hey… Haaay…”<br>
+a sound that made wind and leaves shiver,<br>
+the wild boars retreated,<br>
+and the night, in its silence, awakened like a calm, deep spring.
+</p>
 
-    <p>
-        Nena, our grandmother, set the table for us:<br>
-        white rice like snow, a yellow fried egg like the sun,<br>
-        yogurt as white as the mountains, bread still smelling of fire.<br>
-        These were not merely food,<br>
-        but hymn and prayer,<br>
-        words flowing in the language of soil and wind,<br>
-        and Gatbeva carried them all on the stalk of his wand,<br>
-        like a bright, promised banner, a charming sign of the village.
-    </p>
+<p>
+Gatbeva, with a felt hat and bright eyes,<br>
+led me to a rice field where both humans and boars<br>
+claimed their share,<br>
+and I learned:<br>
+the earth denies no child from its table;<br>
+every drop of rain, every ear of grain, every gust of wind has its right.
+</p>
 
-    <p>
-        We passed through the wheat fields,<br>
-        ears rippling, crickets chanting,<br>
-        the scent of rain-soaked earth, a prayer from the depths of the soil.<br>
-        Every step of Rika carried not just himself but existence itself,<br>
-        and the world trembled and shone in his small steps.
-    </p>
+<p>Hassan Mousavi Takami<br>Paris<br>September 2025</p>
 
-    <p>
-        We reached Nepar in the rice field,<br>
-        fire was lit,<br>
-        smoke and mosquitoes, stories and laughter, all gathered in a circle,<br>
-        and I, with ears full of sound and eyes full of light,<br>
-        understood that suffering and joy, darkness and light,<br>
-        all sing the same song;<br>
-        a hymn eternally echoing in earth, wind, water, and fire,<br>
-        never-ending.
-    </p>
+<audio controls autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_17e2df5f7d.mp3?filename=night-crickets-ambient-6326.mp3" type="audio/mpeg">
+</audio>
 
-    <p>
-        Dawn broke,<br>
-        birds rose,<br>
-        ponds sparkled in the morning light,<br>
-        and Gatbeva’s tired but steady gaze<br>
-        turned the first night vigil into a celebration of existence.
-    </p>
+<script>
+// Stars & floating lights
+const numDots = 40;
+for(let i=0;i<numDots;i++){
+    let dot = document.createElement('div');
+    dot.className = 'light-dot';
+    dot.style.left = Math.random()*window.innerWidth + 'px';
+    dot.style.top = Math.random()*window.innerHeight + 'px';
+    dot.style.animationDuration = (5+Math.random()*15)+'s';
+    document.body.appendChild(dot);
+}
+const numStars = 60;
+for(let i=0;i<numStars;i++){
+    let star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random()*window.innerWidth + 'px';
+    star.style.top = Math.random()*window.innerHeight + 'px';
+    star.style.animationDuration = (1+Math.random()*3)+'s';
+    document.body.appendChild(star);
+}
 
-    <p>
-        Everything—bread, stories, smoke, mosquitoes, fire, ponds, rice fields, soil—<br>
-        is a word in the grand book of life,<br>
-        a book whose pages are inseparable,<br>
-        and all sing the hymn of being;<br>
-        a song endlessly sung by waves, wind, fire, and earth.
-    </p>
+// Leaves
+const numLeaves = 20;
+for(let i=0;i<numLeaves;i++){
+    let leaf = document.createElement('div');
+    leaf.className = 'leaf';
+    leaf.style.left = Math.random()*window.innerWidth + 'px';
+    leaf.style.animationDuration = (5+Math.random()*10)+'s';
+    leaf.style.animationDelay = Math.random()*10+'s';
+    document.body.appendChild(leaf);
+}
 
-    <p>Hassan Mousavi Takami<br>
-    </p>Paris<br>
-    </p>September 2025<br>
+// Parallax effect
+document.addEventListener('mousemove', e=>{
+    const x = (e.clientX / window.innerWidth - 0.5) * 50;
+    const y = (e.clientY / window.innerHeight - 0.5) * 50;
+    document.querySelectorAll('.light-dot').forEach(dot=>{
+        dot.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    document.querySelectorAll('.star').forEach(star=>{
+        star.style.transform = `translate(${x/2}px, ${y/2}px)`;
+    });
+    document.querySelectorAll('.leaf').forEach(leaf=>{
+        leaf.style.transform = `translate(${x/3}px, ${y/3}px)`;
+    });
+});
+</script>
+
+
 <!-- Share buttons -->
   <div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Vazirmatn', sans-serif; text-align: center;">
     <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">Share this article:</p>
