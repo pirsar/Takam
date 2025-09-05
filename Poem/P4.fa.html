@@ -88,5 +88,19 @@
 رنگی تازه بر آن می‌نشاند.
 </div>
 
+</div>
+
+<!-- Script for dynamic URLs -->
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("I recommend reading this article");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=Interesting article to read&body=Take a look at this article: ${url}`;
+</script>
+
 </body>
 </html>
+
