@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choupa</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 2;
+            direction: ltr;
+            background: #fefcf3;
+            color: #2b2b2b;
+            padding: 30px 20px;
+            overflow-x: hidden;
+        }
+
+        a.home-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #4a6fa5;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-bottom: 1px dashed #4a6fa5;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        a.home-link:hover {
+            color: #2a4a7a;
+            border-bottom: 1px solid #2a4a7a;
+        }
+
+        p {
+            margin-bottom: 2em;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        span.highlight {
+            color: #b85c38;
+            font-weight: bold;
+        }
+
+        /* Feuilles animées */
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url('https://i.imgur.com/8y0a0Tg.png') no-repeat center/contain;
+            top: -50px;
+            animation: fall 12s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateX(0) translateY(0) rotate(0deg);}
+            50% { transform: translateX(100px) translateY(300px) rotate(180deg);}
+            100% { transform: translateX(-50px) translateY(600px) rotate(360deg);}
+        }
+
+        /* Animation eau */
+        .water {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #a0d8ef 0%, rgba(160,216,239,0) 100%);
+            animation: wave 4s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes wave {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(15px);}
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="https://pirsar.github.io/Takam/Poem/index.fr.html" class="home-link">Accueil</a>
+
+<p><span class="highlight">Cho-pe</span></p>
+
+<p>Neuf ans, peut-être dix,<br>
+J’étais un garçon plein de rêveries,<br>
+Avec des yeux qui ne craignaient pas encore l’obscurité,<br>
+Car dans chaque ombre, ils voyaient une flamme cachée,<br>
+Une lumière qui contenait les murmures de la terre,<br>
+Et qui disait : chaque être est vivant, chaque être parle, chaque être ressent tristesse et joie.</p>
+
+<p>C’était une nuit calme. De temps en temps, le cri de Gat-Bèva<br>
+Retentissait dans les rizières :<br>
+« Houy… Houyaaa… »<br>
+Un son qui faisait trembler le vent et les feuilles,<br>
+Les sangliers reculaient,<br>
+Et la nuit s’éveillait en silence, profonde et paisible comme une source.</p>
+
+<p>Get-Boua, avec son chapeau de feutre et ses yeux brillants,<br>
+M’emmena dans une rizière où humains et sangliers<br>
+Voulaient chacun leur part,<br>
+Et j’appris :<br>
+La terre ne prive aucun enfant de sa table ;<br>
+Chaque goutte de pluie, chaque épi, chaque souffle de vent a son droit.</p>
+
+<p>Nena, la grand-mère, nous avait préparé un festin :<br>
+Du riz blanc comme neige, un œuf au plat jaune comme le soleil,<br>
+Du yaourt blanc comme la montagne, du pain encore parfumé de feu.<br>
+Ce n’était pas seulement de la nourriture,<br>
+Mais un chant et une prière,<br>
+Des mots qui coulaient dans la langue de la terre et du vent,<br>
+Et Gat-Bèva portait tout suspendu à son bâton, comme un drapeau lumineux et promis, symbole du village.</p>
+
+<p>Nous traversâmes les champs de blé,<br>
+Les épis ondulaient, les grillons priaient,<br>
+L’odeur de la terre après la pluie était une prière venue des profondeurs de la terre.<br>
+Chaque pas de Rika portait non seulement lui-même, mais l’existence entière,<br>
+Et le monde tremblait et brillait sous ses petits pas.</p>
+
+<p>Nous atteignîmes le NePar dans la rizière,<br>
+Le feu fut allumé,<br>
+La fumée, les moustiques, les histoires et les rires, tous réunis dans un cercle,<br>
+Et moi, avec des oreilles pleines de sons et des yeux pleins de lumière,<br>
+Je compris que peine et joie, obscurité et lumière,<br>
+Tout, est un même chant ;<br>
+Un chant qui résonne éternellement dans le cœur de la terre, du vent, de l’eau et du feu,<br>
+Et qui ne s’achève jamais.</p>
+
+<p>L’aube se leva,<br>
+Les oiseaux s’élevèrent,<br>
+Les étangs scintillaient à la lumière du matin,<br>
+Et le regard fatigué mais ferme de Gat-Beva<br>
+Transforma cette première nuit en fête de l’existence.</p>
+
+<p>Chaque chose — pain, histoire, fumée, moustique, feu, étang, rizière, terre —<br>
+Est un mot dans le grand livre de la vie,<br>
+Un livre dont aucune page n’est séparée de l’autre,<br>
+Et tous, chantent l’existence ;<br>
+Un chant que les vagues, le vent, le feu et la terre<br>
+Chantent toujours, partout, sans fin et continuellement.</p>
+
+<p>Hassan Mousavi Takami<br>Paris<br>Septembre 2025</p>
+
+<!-- Animation eau -->
+<div class="water"></div>
+
+<!-- Feuilles animées -->
+<div class="leaf" style="left:10%; animation-delay: 0s;"></div>
+<div class="leaf" style="left:30%; animation-delay: 3s;"></div>
+<div class="leaf" style="left:50%; animation-delay: 6s;"></div>
+<div class="leaf" style="left:70%; animation-delay: 2s;"></div>
+<div class="leaf" style="left:90%; animation-delay: 5s;"></div>
+
+<!-- Share buttons container -->
+<div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Vazirmatn', sans-serif; text-align: center;">
+
+  <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">Partager :</p>
+
+  <!-- Buttons -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 20px;">
+
+    <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+
+    <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+      <i class="fab fa-x-twitter"></i> Twitter
+    </a>
+
+    <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+      <i class="fa fa-envelope"></i> Email
+    </a>
+
+  </div>
+</div>
+
+<!-- Script for dynamic URLs -->
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Je recommande la lecture de cet article");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=Article intéressant à lire&body=Regardez cet article : ${url}`;
+</script>
+
+</body>
+</html>
