@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Poème de la Vie</title>
+<style>
+  body {
+    background: #fdf6e3;
+    color: #3b2f2f;
+    font-family: "Tahoma", "Georgia", serif;
+    line-height: 2.2;
+    margin: 40px;
+    text-align: justify;
+  }
+  h1 {
+    text-align: center;
+    color: #5b3a29;
+  }
+  a {
+    text-decoration: none;
+    color: #8b4513;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  .nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .poem {
+    white-space: pre-line;
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
 
+<div class="nav">
+  <a href="https://pirsar.github.io/Takam/index.fr.html">Accueil</a> |
+  <a href="https://pirsar.github.io/Takam/Poem/index.fr.html">Retour</a>
+</div>
+
+<h1>La Vie</h1>
+
+<div class="poem">
+Le ciel tourne,  
+comme une lanterne blanche dans les mains du vent,  
+sa lumière se répand sur les branches,  
+sur les rivières lointaines,  
+sur les paupières à moitié fermées du sommeil.  
+
+Les étoiles tombent,  
+non seulement sur la terre,  
+mais sur les épaules des oiseaux,  
+sur les eaux silencieuses du lac,  
+sur le visage d’un enfant posé sur les genoux de sa mère.  
+Chaque étincelle,  
+est une graine de vie,  
+qui prend racine au cœur de l’obscurité.  
+
+Les arbres,  
+offrent leurs branches à la nuit,  
+comme des bras qui étreignent doucement.  
+Les feuilles frémissent,  
+non par peur,  
+mais par une brise légère,  
+qui apporte l’odeur de la terre fraîche et de la pluie.  
+
+La terre respire,  
+lentement,  
+et son souffle caresse les herbes,  
+les pétales des jonquilles,  
+le corps humide des pierres.  
+La terre chante,  
+et sa voix, telle une berceuse,  
+court aux oreilles de toutes les créatures.  
+
+Et moi,  
+au milieu de cette lumière vacillante,  
+je ne me trouve pas seul comme un pilier,  
+mais comme un ruisseau parmi mille rivières.  
+Je me mêle à la vie,  
+avec mes yeux, mes mains, mes sons,  
+et je sens que le monde,  
+est une toile infinie,  
+où chaque souffle,  
+chaque regard,  
+chaque sourire,  
+apporte une couleur nouvelle.
+</div>
+
+<p style="text-align: left; font-family: sans-serif;">
+  Hassan Mousavi Takami<br>
+  Paris<br>
+  Juin 2025
+</p>
+  
+<!-- Font Awesome pour les icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Boutons de partage -->
+<div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Georgia', serif; text-align: center;">
+
+  <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">Partager cet article :</p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 20px;">
+    <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+    <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+      <i class="fab fa-x-twitter"></i> Twitter
+    </a>
+    <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+      <i class="fa fa-envelope"></i> Email
+    </a>
+  </div>
+</div>
+
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Je recommande la lecture de cet article");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=Article intéressant à lire&body=Découvrez cet article : ${url}`;
+</script>
+
+</body>
+</html>
