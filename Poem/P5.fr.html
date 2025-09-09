@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Voyage des Souvenirs</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Lora', serif;
+        background-color: #f9f5f2;
+        color: #2c2c2c;
+        line-height: 1.9;
+        margin: 40px;
+    }
+    a {
+        text-decoration: none;
+        color: #336699;
+        margin: 0 10px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 1em;
+        font-weight: 700;
+    }
+    p {
+        margin: 1em 0;
+        text-align: justify;
+        font-size: 1.1em;
+    }
+    .highlight {
+        text-align: center;
+        font-weight: bold;
+        margin: 1em 0;
+        font-size: 1.2em;
+    }
+    .signature {
+        text-align: left;
+        font-family: 'Lora', serif;
+        margin-top: 2em;
+        font-size: 1em;
+    }
+    .share-container {
+        max-width: 550px; 
+        margin: 50px auto 100px auto; 
+        padding: 25px; 
+        background: #f9f9f9; 
+        border-radius: 15px; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+        text-align: center;
+    }
+    .share-container p {
+        font-size: 22px; 
+        font-weight: bold; 
+        margin-bottom: 25px;
+    }
+    .share-buttons {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Voyage des Souvenirs</h1>
+
+<p><a href="https//:pirsar.github.io/Takam/index.fa.html">Accueil</a> | <a href="https//:pirsar.github.io/Takam/Poem/index.fa.html">Retour</a></p>
+
+<p>La nuit est une coupe noire<br>
+qui se déverse sur mon âme.<br>
+La fenêtre est fermée,<br>
+les étoiles sont éteintes,<br>
+et seule une bougie tremblante,<br>
+comme un cœur fiévreux,<br>
+bat dans l'obscurité.</p>
+
+<p>Le vent arrive—<br>
+il secoue,<br>
+il brise,<br>
+il emporte.<br>
+Une feuille tombe,<br>
+une vague rugissante gronde,<br>
+et le temps, comme une vieille page,<br>
+se tourne sans cesse.</p>
+
+<p>Ah, mais—<br>
+à travers une fissure étroite,<br>
+la lumière brille !<br>
+La bougie s’élève,<br>
+la feuille scintille,<br>
+la vague se calme,<br>
+et pour un bref instant,<br>
+une brise d'espoir caresse mes pensées,<br>
+comme un oiseau dans la cage du destin imaginant la liberté.</p>
+
+<p>Mais le destin revient,<br>
+à pas lourds,<br>
+avec le vent encore,<br>
+avec la vague encore.<br>
+La bougie se penche,<br>
+la lumière s'éteint,<br>
+et l'espoir dans l'obscurité<br>
+s’évanouit.</p>
+
+<p>Que reste-t-il ?<br>
+Que le souvenir ?<br>
+Un souvenir qui brille<br>
+non pas comme une ombre,<br>
+mais comme un bijou dans le coffre du cœur.</p>
+
+<div class="highlight">
+Bougie.<br>
+Fenêtre.<br>
+Feuille.<br>
+Vague.<br>
+Page.
+</div>
+
+<p>Tout reste en moi.<br>
+Tout, comme un trésor caché.<br>
+Et j'apprends :<br>
+Même dans la souffrance inévitable,<br>
+l'éternité des choix<br>
+brille dans la lumière du souvenir.</p>
+
+<div class="signature">
+  Hasan Mousavi Takami<br>
+  Paris<br>
+  Juin 2025
+</div>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="share-container">
+
+  <p>Partager cet article :</p>
+
+  <div class="share-buttons">
+
+    <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+
+    <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+      <i class="fab fa-x-twitter"></i> Twitter
+    </a>
+
+    <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+      <i class="fa fa-envelope"></i> Email
+    </a>
+
+  </div>
+</div>
+
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Je recommande de lire cet article");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=Article intéressant à lire&body=Découvrez cet article : ${url}`;
+</script>
+
+</body>
+</html>
