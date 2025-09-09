@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vidéos de Takam</title>
+  <style>
+    body {
+      direction: ltr;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #f0f8f5, #e2f0eb);
+      color: #2f4f3d;
+    }
+
+    header {
+      background-color: #d2efe1;
+      padding: 30px 20px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 2px solid #aad1be;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin: 0;
+      color: #265c47;
+    }
+
+    .back-link {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 18px;
+      color: #1d6b50;
+      text-decoration: none;
+      background-color: #c5e7d7;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #aad1be;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .video-card {
+      background: #ffffff;
+      border: 2px solid #a3d1be;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .video-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #2d5944;
+    }
+
+    .video-card p {
+      font-size: 15px;
+      color: #4d6f5a;
+      margin-top: 5px;
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #608c75;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .back-link {
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+
+      .video-card h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/Takam/index.fr.html" class="back-link">🏠 Retour à l'accueil</a>
+    <h1>Vidéos de Takam</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Première vidéo -->
+    <div class="video-card">
+      <h2>Champs de blé de Takam</h2>
+      <p>
+        Les champs de blé doré s'étendent sur les hautes collines, tels une poésie silencieuse qui parle avec le vent ; voici Takam, le pays du blé et de la lumière.
+      </p>
+      <div class="iframe-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/E57ZKpNl-Fk" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Deuxième vidéo -->
+    <div class="video-card">
+      <h2>Rivière Tajan et rizières</h2>
+      <p>
+        La mélodie de l'eau dans le lit de la rivière Tajan et la danse des rizières vertes dans la brise printanière illustrent l'harmonie entre la nature et la vie.
+      </p>
+      <div class="iframe-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/Z1batG2pGAI" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Village de Takam - Présentation de la nature, de la culture et des habitants
+  </footer>
+
+</body>
+</html>
