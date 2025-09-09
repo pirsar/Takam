@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Takam</title>
+  <style>
+    body {
+      direction: rtl;
+      font-family: "Vazirmatn", "Tahoma", sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e4efe7);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffffee;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border: 2px solid #a3c4aa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e6049;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .poem {
+      white-space: pre-line;
+      font-size: 28px;
+      color: #333;
+      line-height: 2.2;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #679b79;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-size: 28px;
+      transition: background-color 0.3s;
+    }
+
+    .back-link a:hover {
+      background-color: #4d7f62;
+    }
+  </style>
+</head>
+<body>
+   <a class="back-link" href="index.fr.html">🏠 Accueil</a>
+  <div class="container">
+    <h1>Takam</h1>
+    <div class="poem">
+Je suis arrivé à Takam, j’ai vu un paradis vert et enchanteur  
+Et j’ai compris que tout cela est œuvre divine et sagesse  
+
+Au nord, les forêts luxuriantes tombent en boucles comme des mèches sur la tête d’un ami  
+À l’ouest, les arbres se dressent fièrement et majestueusement  
+
+Au sud, les plaines dorées dansent entre elles  
+Et à l’est, le Tajan comme vin remplit les champs de bonheur  
+
+Le matin, le chant des oiseaux réveille les cœurs endormis  
+Car tous ces sons forment une harmonie et un lien  
+
+Les aboiements des chiens et des chacals, et les feux scintillants  
+Participent à un jeu de bravoure et à la paix dans les vallées  
+
+Takam existe depuis des milliers d’années et demeure  
+La rivière “Rika” coule librement, aspirant à son voyage  
+    </div>
+
+    <div class="back-link">
+      <a href="https://pirsar.github.io/Takam/index.fr.html">Retour à la page principale</a>
+    </div>
+  </div>
+
+<p style="text-align: left; direction: rtl; font-family: sans-serif;">
+  Hassan Mousavi Takami<br>
+  Paris<br>
+  Juin 2025
+</p>
+  
+  <!-- Fontes Vazirmatn -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Share buttons container -->
+<div style="max-width: 550px; margin: 50px auto 100px auto; padding: 25px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Vazirmatn', sans-serif; text-align: center;">
+
+  <p style="font-size: 22px; font-weight: bold; margin-bottom: 25px;">Partager cet article :</p>
+
+  <!-- Buttons -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 20px;">
+
+    <a id="tg" target="_blank" style="text-decoration: none; color: #0088cc;">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+
+    <a id="wa" target="_blank" style="text-decoration: none; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a id="tw" target="_blank" style="text-decoration: none; color: #000000;">
+      <i class="fab fa-x-twitter"></i> Twitter
+    </a>
+
+    <a id="mail" target="_blank" style="text-decoration: none; color: #d44638;">
+      <i class="fa fa-envelope"></i> Email
+    </a>
+
+  </div>
+</div>
+
+<!-- Script pour URLs dynamiques -->
+<script>
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Je recommande la lecture de cet article");
+
+  document.getElementById("tg").href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById("wa").href = `https://wa.me/?text=${text}:+${url}`;
+  document.getElementById("tw").href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById("mail").href = `mailto:?subject=Article intéressant à lire&body=Jetez un œil à cet article : ${url}`;
+</script>
+
+</body>
+</html>
